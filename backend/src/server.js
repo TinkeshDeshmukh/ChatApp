@@ -23,9 +23,9 @@ app.use(cookieParser());
 app.use("/api/auth",authRoute);
 app.use("/api/messages",messageRoute);
 if(process.env.NODE_ENV==="production"){
-    app.use(express.static(path.join(__dirname,"/frontend/dist")));
+    app.use(express.static(path.join(__dirname,"../frontend/dist")));
     app.get("*",(req,res)=>{
-        res.send(path.join(__dirname,"/frontend","dist","index.html"))
+        res.send(path.join(__dirname,"../frontend","dist","index.html"))
     })
 }
 server.listen(port,()=>{
