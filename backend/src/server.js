@@ -7,7 +7,7 @@ import messageRoute from "./routes/message.route.js";
 import cors from "cors"
 import { app, io, server } from "./lib/socket.js";
 import path from "path";
-dotenv.config({path:"../.env"});
+dotenv.config();  
 
 const port =process.env.PORT
 const __dirname=path.resolve();
